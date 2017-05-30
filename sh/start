@@ -1,0 +1,7 @@
+#!/bin/bash
+set -ex
+
+./node_modules/.bin/elm-package install --yes
+./node_modules/.bin/elm-make ./Main.elm --output public/Main.js
+
+node server.js
